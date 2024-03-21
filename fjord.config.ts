@@ -1,10 +1,9 @@
 const fjord: FjordProps = {
-  site_name: "TravelTrack", // site name: used in the header and footer
-  site_domain: "http://localhost:3000", // site domain: used in the sitemap
-  site_title:
-    "Fjord | Opinionated Next JS and Wordpress Starter by Alpine Codex",
+  site_name: "Traveltrack", // site name: used in the header and footer
+  site_domain: process.env.SITE_DOMAIN || "https://traveltrack.com",
+  site_title: "Traveltrack | Travel the world with us.",
   site_description:
-    "Fjord is an opinionated Next JS and Wordpress starter. It's built to be a solid foundation for your next project.",
+    "TravelTrack is your ultimate resource for travel guides and essential information. We provide the best travel tips and advice to help you plan your next trip.",
   keywords: ["Next.js", "React", "JavaScript"],
   authors: [{ name: "9d8", url: "https://9d8.dev" }],
   posts_per_page: 9,

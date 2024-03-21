@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: {
     template: fjord.site_title,
     default: `%s | ${fjord.site_name}`,
-    absolute: `Home | ${fjord.site_name}`,
+    absolute: fjord.site_title,
   },
   description: fjord.site_description,
   generator: "Next.js",
@@ -38,22 +38,16 @@ export const metadata: Metadata = {
     siteName: fjord.site_name,
     images: [
       {
-        url: `${fjord.site_domain}/og.png`, // Must be an absolute URL
-        width: 800,
-        height: 600,
-        alt: fjord.site_description,
-      },
-      {
-        url: `${fjord.site_domain}/og-alt.png`, // Must be an absolute URL
-        width: 1800,
-        height: 1600,
+        url: `${fjord.site_domain}/opengraph-image.jpg`, // Must be an absolute URL
+        width: 1200,
+        height: 630,
         alt: fjord.site_description,
       },
     ],
     locale: "en_US",
     type: "website",
   },
-  manifest: `${fjord.site_domain}/manifest.json`, // Must be an absolute URL
+  // manifest: `${fjord.site_domain}/manifest.json`, // Must be an absolute URL
   twitter: {
     card: "summary_large_image",
     title: fjord.site_title,
@@ -61,7 +55,7 @@ export const metadata: Metadata = {
     // siteId: "1467726470533754880",
     // creator: "@nextjs",
     // creatorId: "1467726470533754880",
-    images: [`${fjord.site_domain}/og.png`], // Must be an absolute URL
+    images: [`${fjord.site_domain}/opengraph-image.jpg`], // Must be an absolute URL
   },
   icons: {
     icon: [

@@ -1,2 +1,7 @@
+# Example Disallow
+# User-agent: *
+# Disallow: /accounts
+
+# Allow all crawlers
 User-agent: *
-Disallow:
+Allow: /
