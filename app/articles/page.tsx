@@ -38,13 +38,16 @@ export default async function Posts({
 
   return (
     <Craft.Main>
-      <SecondaryHero title="All Posts" subtitle={`${fjord.site_name} blog`}>
-        All posts from {fjord.site_name}. These are all the posts from your
-        WordPress.
+      <SecondaryHero
+        title="Our travel articles"
+        subtitle={`${fjord.site_name} blog`}
+      >
+        Explore articles from our the world. From travel tips to destination
+        guides, we have it all.
       </SecondaryHero>
       <Craft.Section>
         <Craft.Container>
-          <ContentGrid id="posts">
+          <ContentGrid id="articles">
             {data.map((post: PostProps) => (
               <PostCard
                 key={post.id}

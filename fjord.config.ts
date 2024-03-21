@@ -1,6 +1,6 @@
 const fjord: FjordProps = {
-  site_name: "Fjord", // site name: used in the header and footer
-  site_domain: "https://fjord.dev", // site domain: used in the sitemap
+  site_name: "TravelTrack", // site name: used in the header and footer
+  site_domain: "http://localhost:3000", // site domain: used in the sitemap
   site_title:
     "Fjord | Opinionated Next JS and Wordpress Starter by Alpine Codex",
   site_description:
@@ -8,10 +8,10 @@ const fjord: FjordProps = {
   keywords: ["Next.js", "React", "JavaScript"],
   authors: [{ name: "9d8", url: "https://9d8.dev" }],
   posts_per_page: 9,
-  wordpress_url: "https://windpress.wpenginepowered.com",
+  wordpress_url: "https://traveltrack-27e7f5.ingress-baronn.ewp.live/",
   google_analytics_id: "G-7VM8KZENP7",
 
-  logo: "../logo.svg",
+  logo: "/logo.jpg",
 
   // change the font using `next/font` in `layout.tsx` in the app directory.
   // check out the docs here: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#google-fonts
@@ -19,9 +19,7 @@ const fjord: FjordProps = {
   menu: {
     main: {
       home: "/", // Don't Change
-      blog: "/posts", // default is `/posts`
-      about: "/about", // you can remove this if you don't want an about page
-      contact: "/contact", // you can remove this if you don't want a contact page
+      articles: "/articles", // default is `/posts`
     },
     content: {
       authors: "/posts/authors", // default is `/posts/authors`

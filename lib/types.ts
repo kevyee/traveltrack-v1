@@ -117,9 +117,7 @@ type FjordProps = {
   menu: {
     main: {
       home: string;
-      blog: string;
-      about?: string;
-      contact?: string;
+      articles: string;
     };
     content: {
       authors: string;

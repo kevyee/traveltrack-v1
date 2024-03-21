@@ -15,14 +15,14 @@ const Layout = ({ children, className }: LayoutProps) => {
       className={cn("antialiased scroll-smooth focus:scroll-auto", className)}
     >
       <body className={className}>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        > */}
+        {children}
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
@@ -82,7 +82,7 @@ type ContainerProps = {
 
 const Container = ({ children, className, id }: ContainerProps) => {
   return (
-    <div className={cn("max-w-5xl mx-auto", "p-6 sm:p-8", className)} id={id}>
+    <div className={cn("max-w-7xl mx-auto", "p-6 sm:p-8", className)} id={id}>
       {children}
     </div>
   );

@@ -1,10 +1,10 @@
 // Layout
 import * as Craft from "@/components/craft/layout";
-import Logo from "@/public/logo.svg";
+import Logo from "@/public/logo.jpg";
 import fjord from "@/fjord.config";
 
 type TestimonialsText = {
-  logo: string;
+  logo: any;
   name: string;
   quote: string;
   title: string;

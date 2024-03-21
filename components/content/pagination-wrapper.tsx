@@ -16,7 +16,9 @@ const PaginationWrapper = ({ page, lastPage }: PaginationProps) => {
           <PaginationItem>
             <PaginationPrevious
               href={
-                page > 2 ? `/posts/?page=${page - 1}#posts` : "/posts#posts"
+                page > 2
+                  ? `/articles/?page=${page - 1}#articles`
+                  : "/articles#articles"
               }
             />
           </PaginationItem>
@@ -31,7 +33,7 @@ const PaginationWrapper = ({ page, lastPage }: PaginationProps) => {
           .map((pageNum) => (
             <PaginationItem key={pageNum}>
               <PaginationLink
-                href={`/posts/?page=${pageNum}#posts`}
+                href={`/articles/?page=${pageNum}#articles`}
                 isActive={pageNum === page}
               >
                 {pageNum}
@@ -40,7 +42,7 @@ const PaginationWrapper = ({ page, lastPage }: PaginationProps) => {
           ))}
         {page < lastPage && (
           <PaginationItem>
-            <PaginationNext href={`/posts/?page=${page + 1}#posts`} />
+            <PaginationNext href={`/articles/?page=${page + 1}#articles`} />
           </PaginationItem>
         )}
       </PaginationContent>

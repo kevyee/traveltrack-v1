@@ -14,9 +14,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <Craft.Main>
-      <SecondaryHero title="About us" subtitle="Learn More about Fjord">
-        Welcome to the about page. this is where you can tell your users about
-        your project.
+      <SecondaryHero
+        title="Explore the world with us"
+        subtitle="Learn More about Fjord"
+      >
+        Discover unforgettable experiences and hidden gems in every corner of
+        the globe.
       </SecondaryHero>
       <About />
       <FAQ />
