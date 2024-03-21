@@ -60,7 +60,7 @@ export default async function Posts({
           <PaginationWrapper page={page} lastPage={lastPage} />
         </Craft.Container>
       </Craft.Section>
-      <CTA />
+      {/* <CTA /> */}
     </Craft.Main>
   );
 }
