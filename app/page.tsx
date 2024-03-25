@@ -22,7 +22,7 @@ export default async function Home() {
       <Hero />
 
       <Craft.Section>
-        <Craft.Container>
+        <Craft.Container className="not-prose">
           <h3 className="text-4xl mb-12">Our latest travel articles</h3>
           <ContentGrid id="articles">
             {data.map((post: PostProps) => (

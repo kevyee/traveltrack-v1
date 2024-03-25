@@ -14,6 +14,7 @@ import Link from "next/link";
 import Logo from "@/public/logo.jpg";
 import Balancer from "react-wrap-balancer";
 import { Instagram, Facebook } from "lucide-react";
+import GoogleAnalytics from "@/components/global/google-analytics";
 
 const facebook_link = "https://www.facebook.com/traveltrack.co";
 const instagram_link = "https://www.instagram.com/traveltrack";
@@ -21,6 +22,7 @@ const instagram_link = "https://www.instagram.com/traveltrack";
 const Footer = () => {
   return (
     <footer className="border-t drop-shadow-none	">
+      <GoogleAnalytics gaTrackingId={process.env.GOOGLE_ANALYTICS_ID} />
       <Craft.Section>
         <Craft.Container className="grid gap-6 md:grid-cols-2">
           <div className="grid gap-6">
