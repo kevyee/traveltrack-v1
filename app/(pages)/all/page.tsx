@@ -59,7 +59,7 @@ export default async function Pages() {
         </Craft.Container>
       </Craft.Section>
 
-      <CTA />
+      {/* <CTA /> */}
     </Craft.Main>
   );
 }

@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </Craft.Container>
       </Craft.Section>
 
-      <CTA />
+      {/* <CTA /> */}
     </Craft.Main>
   );
 }

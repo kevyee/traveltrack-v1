@@ -20,7 +20,7 @@ export default function Page() {
       </SecondaryHero>
       <About />
       <FAQ />
-      <CTA />
+      {/* <CTA /> */}
     </Craft.Main>
   );
 }

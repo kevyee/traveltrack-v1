@@ -74,7 +74,7 @@ export default async function Page({
           <PaginationWrapper page={page} lastPage={lastPage} />
         </Craft.Container>
       </Craft.Section>
-      <CTA />
+      {/* <CTA /> */}
     </Craft.Main>
   );
 }
