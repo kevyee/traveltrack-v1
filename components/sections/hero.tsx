@@ -11,12 +11,12 @@ const Hero = () => {
       <Image
         rel="preload"
         // className="absolute  -z-10  object-cover top-1/2 -translate-y-1/2 !border-0"
-        src="/hero.jpeg"
+        src="/hero.jpeg?v=2"
         priority={true}
         layout="fill" // This makes the image fill the container
         objectFit="cover" // This scales the image nicely to cover the container
         quality={100} // Optional: Sets the image quality to 100%
-        className="z-[-1] !border-0 !mt-0 !mb-0 !rounded-none" // Ensure the image stays in the background
+        className="z-[-1] !border-0 !mt-0 !mb-0 !rounded-none bg-black" // Ensure the image stays in the background
         alt="Hero Image"
       />
       <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-black opacity-40 z-10"></div>
