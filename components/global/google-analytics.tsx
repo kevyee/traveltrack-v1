@@ -11,6 +11,7 @@ const GoogleAnalytics = ({
     <>
       <Script
         strategy="afterInteractive"
+        async={true}
         src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`}
       />
       <Script id="ga-script" strategy="afterInteractive">
