@@ -137,3 +137,35 @@ export async function fetchPages() {
 
   return res.json();
 }
+
+// Fetch all published posts
+export async function fetchAllPublishedPosts() {
+  let pageNumber = 1;
+  const perPage = 30;
+  let finished = false;
+  let posts: PostProps[] = [];
+
+  while (!finished) {
+    const response = await fetch(
+      `${fjord.wordpress_url}/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${pageNumber}&status=publish`,
+      {
+        next: { revalidate: 3600 },
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    posts = [...posts, ...data];
+    const total = parseInt(response.headers.get("X-WP-Total") || "0");
+
+    if (posts.length >= total) {
+      finished = true;
+    } else {
+      pageNumber++;
+    }
+  }
+  return posts;
+}

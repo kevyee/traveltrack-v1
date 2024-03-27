@@ -11,16 +11,12 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 // Data Imports
-import { fetchPostBySlug } from "@/lib/data";
+import { fetchAllPublishedPosts, fetchPostBySlug } from "@/lib/data";
 
 export async function generateStaticParams() {
-  const res = await fetch(`${fjord.wordpress_url}/wp-json/wp/v2/posts?_embed`, {
-    next: { revalidate: 3600 },
-  });
+  const posts: PostProps[] = await fetchAllPublishedPosts();
 
-  const data: PostProps[] = await res.json();
-
-  return data.map((post) => ({
+  return posts.map((post) => ({
     slug: post?.slug,
   }));
 }

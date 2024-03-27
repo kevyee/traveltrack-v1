@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   applicationName: fjord.site_name,
   referrer: "origin-when-cross-origin",
   keywords: fjord.keywords,
-  authors: fjord.authors,
   metadataBase: new URL(fjord.site_domain),
   alternates: {
     canonical: "/",

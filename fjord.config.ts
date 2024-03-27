@@ -18,7 +18,7 @@ const fjord: FjordProps = {
   ],
   authors: [{ name: "9d8", url: "https://9d8.dev" }],
   posts_per_page: 9,
-  wordpress_url: "https://traveltrack-27e7f5.ingress-baronn.ewp.live/",
+  wordpress_url: "https://traveltrack-27e7f5.ingress-baronn.ewp.live",
   google_analytics_id: "G-7VM8KZENP7",
 
   logo: "/logo.jpg",
