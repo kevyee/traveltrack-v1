@@ -16,7 +16,9 @@ const fjord: FjordProps = {
     "Mountain retreats",
     "Foodie destinations",
   ],
-  authors: [{ name: "9d8", url: "https://9d8.dev" }],
+  authors: [
+    { name: "Kevin Yee", url: "https://www.linkedin.com/in/kevyee19/" },
+  ],
   posts_per_page: 9,
   wordpress_url: "https://traveltrack-27e7f5.ingress-baronn.ewp.live",
   google_analytics_id: "G-7VM8KZENP7",
