@@ -19,7 +19,7 @@ export async function generateMetadata({
       limits: { maxInputLength: 160 },
     }) + "...";
   const image =
-    post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.full
+    post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
       .source_url || `${fjord.site_domain}/opengraph-image.jpg`;
 
   const url = `${fjord.site_domain}/articles/${post.slug}`;
