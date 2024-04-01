@@ -49,6 +49,12 @@ export async function generateMetadata({
       locale: "en_US",
       type: "article",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      description: description,
+      images: [image], // Must be an absolute URL
+    },
   };
 }
 

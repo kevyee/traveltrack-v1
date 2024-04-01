@@ -42,12 +42,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   // manifest: `${fjord.site_domain}/manifest.json`, // Must be an absolute URL
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: fjord.site_title,
-  //   description: fjord.site_description,
-  //   images: [`${fjord.site_domain}/opengraph-image.jpg`], // Must be an absolute URL
-  // },
+  twitter: {
+    card: "summary_large_image",
+    title: fjord.site_title,
+    description: fjord.site_description,
+    images: [`${fjord.site_domain}/opengraph-image.jpg`], // Must be an absolute URL
+  },
 };
 
 export default function RootLayout({
