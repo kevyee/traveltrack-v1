@@ -18,9 +18,11 @@ export async function generateMetadata({
       wordwrap: false,
       limits: { maxInputLength: 160 },
     }) + "...";
-  const image = "https://www.traveltrack.com/img";
-  // post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
-  //   .source_url || `${fjord.site_domain}/opengraph-image.jpg`;
+
+  const image = `${fjord.site_domain}/img?url=${
+    post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
+      .source_url || `${fjord.site_domain}/opengraph-image.jpg`
+  }`;
 
   const url = `${fjord.site_domain}/articles/${post.slug}`;
 
