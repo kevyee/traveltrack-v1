@@ -19,8 +19,9 @@ export async function generateMetadata({
       limits: { maxInputLength: 160 },
     }) + "...";
   const image =
-    post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
-      .source_url || `${fjord.site_domain}/opengraph-image.jpg`;
+    "https://lp-cms-production.imgix.net/2024-03/shutterstock1384709621-16.9.jpg?w=600&h=400";
+  // post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
+  //   .source_url || `${fjord.site_domain}/opengraph-image.jpg`;
 
   const url = `${fjord.site_domain}/articles/${post.slug}`;
 
