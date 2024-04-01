@@ -13,13 +13,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: {
-    template: fjord.site_title,
-    default: `%s | ${fjord.site_name}`,
-    absolute: fjord.site_title,
-  },
+  title: fjord.site_title,
   description: fjord.site_description,
-  generator: "Next.js",
   applicationName: fjord.site_name,
   referrer: "origin-when-cross-origin",
   keywords: fjord.keywords,
@@ -47,33 +42,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   // manifest: `${fjord.site_domain}/manifest.json`, // Must be an absolute URL
-  twitter: {
-    card: "summary_large_image",
-    title: fjord.site_title,
-    description: fjord.site_description,
-    // siteId: "1467726470533754880",
-    // creator: "@nextjs",
-    // creatorId: "1467726470533754880",
-    images: [`${fjord.site_domain}/opengraph-image.jpg`], // Must be an absolute URL
-  },
-  icons: {
-    icon: [
-      { url: "/icon.png" },
-      new URL("/icon.png", "https://example.com"),
-      { url: "/icon-dark.png", media: "(prefers-color-scheme: dark)" },
-    ],
-    shortcut: ["/shortcut-icon.png"],
-    apple: [
-      { url: "/apple-icon.png" },
-      { url: "/apple-icon-x3.png", sizes: "180x180", type: "image/png" },
-    ],
-    // other: [
-    //   {
-    //     rel: "apple-touch-icon-precomposed",
-    //     url: "/apple-touch-icon-precomposed.png",
-    //   },
-    // ],
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: fjord.site_title,
+  //   description: fjord.site_description,
+  //   images: [`${fjord.site_domain}/opengraph-image.jpg`], // Must be an absolute URL
+  // },
 };
 
 export default function RootLayout({

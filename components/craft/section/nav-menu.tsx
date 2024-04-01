@@ -17,7 +17,7 @@ import {
 
 export function NavMenu() {
   return (
-    <NavigationMenu className="hidden sm:block">
+    <NavigationMenu className="hidden md:block">
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>

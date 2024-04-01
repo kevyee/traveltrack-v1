@@ -8,6 +8,8 @@ type MediaDetailsProps = {
       source_url: string;
     };
   };
+  width: number;
+  height: number;
 };
 
 type AuthorDetailsProps = {

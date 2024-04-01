@@ -11,15 +11,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 // Data Imports
-import { fetchAllPublishedPosts, fetchPostBySlug } from "@/lib/data";
-
-export async function generateStaticParams() {
-  const posts: PostProps[] = await fetchAllPublishedPosts();
-
-  return posts.map((post) => ({
-    slug: post?.slug,
-  }));
-}
+import { fetchPostBySlug } from "@/lib/data";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const post: PostProps = await fetchPostBySlug(params?.slug);
@@ -29,11 +21,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const date = new Date(post.date);
   const author = post._embedded?.author?.[0] ?? null;
-
-  const metadata: Metadata = {
-    title: `${post.title.rendered} | ${fjord.site_name}`,
-    description: post.excerpt?.rendered,
-  };
 
   // Ensure that the excerpt and author are not undefined before passing to the Article component
   if (!post.excerpt || !author) {
