@@ -39,9 +39,8 @@ export async function generateMetadata({
       images: [
         {
           url: image,
-          width: post._embedded?.["wp:featuredmedia"]?.[0].media_details.width,
-          height:
-            post._embedded?.["wp:featuredmedia"]?.[0].media_details.height,
+          width: 1200,
+          height: 630,
           alt: title,
         },
       ],
