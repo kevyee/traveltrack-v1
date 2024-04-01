@@ -19,7 +19,7 @@ export async function generateMetadata({
       limits: { maxInputLength: 160 },
     }) + "...";
   const image =
-    "https://lp-cms-production.imgix.net/2024-03/shutterstock1384709621-16.9.jpg?w=600&h=400";
+    "https://traveltrack-27e7f5.ingress-baronn.ewp.live/wp-content/uploads/2024/04/asdfasdfasdf.jpg";
   // post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
   //   .source_url || `${fjord.site_domain}/opengraph-image.jpg`;
 
