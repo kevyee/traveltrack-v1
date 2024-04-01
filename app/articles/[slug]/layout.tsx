@@ -19,9 +19,8 @@ export async function generateMetadata({
       limits: { maxInputLength: 160 },
     }) + "...";
   const image =
-    "https://sobercentre.com/wp-content/uploads/2024/04/pexels-peng-louis-1399034-scaled.jpg";
-  // post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
-  //   .source_url || `${fjord.site_domain}/opengraph-image.jpg`;
+    post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
+      .source_url || `${fjord.site_domain}/opengraph-image.jpg`;
 
   const url = `${fjord.site_domain}/articles/${post.slug}`;
 
