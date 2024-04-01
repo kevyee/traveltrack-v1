@@ -19,7 +19,7 @@ export async function generateMetadata({
       limits: { maxInputLength: 160 },
     }) + "...";
   const image =
-    "https://traveltrack-27e7f5.ingress-baronn.ewp.live/wp-content/uploads/2024/04/asdfasdfasdf.jpg";
+    "https://sobercentre.com/wp-content/uploads/2024/04/pexels-peng-louis-1399034-scaled.jpg";
   // post._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.large
   //   .source_url || `${fjord.site_domain}/opengraph-image.jpg`;
 
