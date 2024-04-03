@@ -18,8 +18,37 @@ import { fetchTags, fetchPosts } from "@/lib/data";
 
 // Meta Data
 export const metadata: Metadata = {
-  title: `Blog | ${fjord.site_name}`,
-  description: `Read the ${fjord.site_name} blog. ${fjord.site_description}`,
+  title: `Articles | ${fjord.site_name}`,
+  description:
+    "Explore articles from our the world. From travel tips to destination guides, we have it all.",
+  metadataBase: new URL(fjord.site_domain),
+  alternates: {
+    canonical: "/articles",
+  },
+  openGraph: {
+    title: `Articles | ${fjord.site_name}`,
+    description:
+      "Explore articles from our the world. From travel tips to destination guides, we have it all.",
+    url: "/articles",
+    siteName: fjord.site_name,
+    images: [
+      {
+        url: `${fjord.site_domain}/opengraph-image.jpg`, // Must be an absolute URL
+        width: 1200,
+        height: 630,
+        alt: fjord.site_description,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Articles | ${fjord.site_name}`,
+    description:
+      "Explore articles from our the world. From travel tips to destination guides, we have it all.",
+    images: [`${fjord.site_domain}/opengraph-image.jpg`], // Must be an absolute URL
+  },
 };
 
 export default async function Posts({
