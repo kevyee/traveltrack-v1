@@ -10,9 +10,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post: PostProps = await fetchPostBySlug(params?.slug);
 
-  const title = `${convert(post.title.rendered, { wordwrap: false })} | ${
-    fjord.site_name
-  }`;
+  const title = `${convert(post.title.rendered, { wordwrap: false })}`;
+  const titleWithSiteName = `${title} | ${fjord.site_name}`;
   const description =
     convert(post.excerpt?.rendered || "", {
       wordwrap: false,
@@ -27,7 +26,7 @@ export async function generateMetadata({
   const url = `${fjord.site_domain}/articles/${post.slug}`;
 
   return {
-    title: title,
+    title: titleWithSiteName,
     description: description,
     metadataBase: new URL(fjord.site_domain),
     alternates: {
@@ -51,7 +50,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: title,
+      title: titleWithSiteName,
       description: description,
       images: [image], // Must be an absolute URL
     },
